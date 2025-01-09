@@ -1,2 +1,2 @@
 # Projet_steganographie
-Projet de stéganographie
+Projet de stéganographie d'étude
