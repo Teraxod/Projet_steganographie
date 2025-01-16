@@ -1,5 +1,8 @@
 import openai
 
+# CATCH PHRASE SOUS FORME CHALLENGE ROOTME#
+#"Chaque début est une fondation : il mérite toute l’attention qu’il réclame pour bâtir le reste avec solidité."#
+#
 # Remplace par ta clé API OpenAI
 openai.api_key = "ta_cle_api_openai"
 
