@@ -1,8 +1,10 @@
+# Ce script va rechercher dans les exifs du image si un flag y est caché
+
 import piexif
 from PIL import Image
 
 # Chemin de l'image
-image_path = 'C:/Users/r.voisin/Documents/Computer-Password-Security-Hacker - Copy.jpg'
+image_path = 'C:/Users/Documents/image.jpg'
 
 # Ouvre l'image
 image = Image.open(image_path)
