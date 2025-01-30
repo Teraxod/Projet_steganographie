@@ -18,7 +18,7 @@ def hide_filename_in_image(image_path, text_file_path, output_image_path):
     except Exception as e:
         print(f"Erreur lors de l'ajout du nom du fichier à l'image : {e}")
 
-image_path = 'pomme.png'  
+image_path = 'image.png'  
 text_file_path = 'flag.txt'  
 output_image_path = 'image_avec_nom_cache_exif.png'  
 hide_filename_in_image(image_path, text_file_path, output_image_path)
