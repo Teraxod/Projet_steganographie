@@ -1,4 +1,4 @@
-# Ce script va rechercher dans les exifs du image si un flag y est caché
+# Ce script va rechercher dans les exifs d'une image si un flag y est caché
 
 import piexif
 from PIL import Image
