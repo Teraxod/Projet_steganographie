@@ -27,7 +27,7 @@ def hide_filename_in_image(image_path, text_file_path, output_image_path):
         print(f"Erreur lors de l'ajout du nom du fichier à l'image : {e}")
 
 # Exemple d'utilisation
-image_path = 'pomme.png'  # Remplacez par le chemin de votre image
-text_file_path = 'flag.txt'  # Remplacez par le chemin de votre fichier (le nom du fichier sera caché)
-output_image_path = 'image_avec_nom_cache_exif.png'  # Fichier image de sortie
+image_path = 'pomme.png'  
+text_file_path = 'flag.txt'  
+output_image_path = 'image_avec_nom_cache_exif.png'  
 hide_filename_in_image(image_path, text_file_path, output_image_path)
