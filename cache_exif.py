@@ -4,6 +4,8 @@
 from PIL import Image
 import piexif
 
+message = input("Veuillez entrer le message que vous souhaitez cacher : ")
+
 # Ouvre l'image
 image_path = 'image.jpg'
 image = Image.open(image_path)
@@ -16,7 +18,7 @@ else:
     exif_dict = {"0th": {}, "Exif": {}, "GPS": {}, "Interop": {}, "1st": {}, "thumbnail": None}
 
 # Ajoute un texte personnalisé dans le champ ImageDescription
-exif_dict['0th'][piexif.ImageIFD.ImageDescription] = b"FLag(test)"
+exif_dict['0th'][piexif.ImageIFD.ImageDescription] = message
 
 # Sauvegarde l'image avec les métadonnées EXIF modifiées
 output_path = 'image_text_exif.jpg'
