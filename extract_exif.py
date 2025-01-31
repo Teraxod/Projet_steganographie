@@ -4,33 +4,43 @@ import piexif
 from PIL import Image
 
 # Chemin de l'image
-image_path = 'C:/Users/r.voisin/Documents/Computer-Password-Security-Hacker - Copy.jpg'
+image_path = 'image_text_exif.jpg'
 
 # Ouvre l'image
 image = Image.open(image_path)
 
-# Charge les métadonnées EXIF existantes
-exif_dict = piexif.load(image.info.get("exif", b""))
+# Charge les métadonnées EXIF existantes en toute sécurité
+exif_bytes = image.info.get("exif")
+if exif_bytes:
+    try:
+        exif_dict = piexif.load(exif_bytes)
+    except Exception as e:
+        print(f"⚠️ Erreur lors du chargement des métadonnées EXIF : {e}")
+        exif_dict = {}
+else:
+    exif_dict = {}
 
-# Fonction pour vérifier si la valeur commence par "flag" et l'afficher
+# Fonction pour vérifier si la valeur contient "flag" et l'afficher
 def check_flag(value):
-    # Si la valeur est une chaîne de caractères ou un byte string et commence par "flag"
-    if isinstance(value, bytes):
-        value = value.decode(errors='ignore')  # Décoder les byte strings en texte
-    if isinstance(value, str) and value.startswith("flag"):
+    """ Vérifie si la valeur est un texte contenant 'flag' (insensible à la casse). """
+    if isinstance(value, bytes):  # Si c'est un byte string, on le décode
+        value = value.decode(errors='ignore')
+    if isinstance(value, str) and "flag" in value.lower():  # Vérifie si 'flag' est présent
         return value
     return None
 
-# Affiche les mots qui commencent par "flag"
-print("Mots commençant par 'flag' dans les EXIF :")
+# Recherche et affichage des valeurs contenant "flag"
+print("\n🔍 Recherche de 'flag' dans les métadonnées EXIF :")
 found_flags = False
 
-for ifd in exif_dict:
-    for tag, value in exif_dict[ifd].items():
-        flag_value = check_flag(value)  # Vérifie si la valeur commence par "flag"
-        if flag_value:
-            found_flags = True
-            print(f"  Flag trouvé: {flag_value}")
+for ifd, data in exif_dict.items():
+    if isinstance(data, dict):  # ✅ Vérifie que la valeur est un dictionnaire
+        for tag, value in data.items():
+            flag_value = check_flag(value)  # Vérifie si la valeur contient "flag"
+            if flag_value:
+                found_flags = True
+                print(f"  ✅ Flag trouvé dans {ifd} : {flag_value}")
 
 if not found_flags:
-    print("  Aucun mot commençant par 'flag' trouvé dans les EXIF.")
+    print("  ❌ Aucun flag trouvé dans les métadonnées EXIF.")
+
