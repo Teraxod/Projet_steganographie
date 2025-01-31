@@ -1,10 +1,5 @@
-# Ce script va cacher le flag dans la partie exif de l'image
-
-
 from PIL import Image
 import piexif
-
-message = input("Veuillez entrer le message que vous souhaitez cacher : ")
 
 # Ouvre l'image
 image_path = 'image.jpg'
@@ -18,11 +13,10 @@ else:
     exif_dict = {"0th": {}, "Exif": {}, "GPS": {}, "Interop": {}, "1st": {}, "thumbnail": None}
 
 # Ajoute un texte personnalisé dans le champ ImageDescription
-exif_dict['0th'][piexif.ImageIFD.ImageDescription] = message
+exif_dict['0th'][piexif.ImageIFD.ImageDescription] = b"FLag(cyber_T4er_flag_8)"
 
 # Sauvegarde l'image avec les métadonnées EXIF modifiées
 output_path = 'image_text_exif.jpg'
 image.save(output_path, "jpeg", exif=piexif.dump(exif_dict))
 
 print(f"Le texte a été ajouté aux métadonnées EXIF de l'image. Nouvelle image enregistrée sous {output_path}")
-
