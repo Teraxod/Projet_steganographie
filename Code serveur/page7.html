@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Page 7 - Encoder un message dans une image</title>
+  <link rel="stylesheet" href="css/theme_css.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🛠️ Encoder un message dans une image</h1>
+
+    <div class="banner">
+      Sélectionnez une image et encodez un message caché avec la méthode choisie.
+    </div>
+
+    <form action="/cgi-bin/hide_message_in_image.py" method="post" enctype="multipart/form-data">
+      <label for="image">Sélectionnez une image :</label>
+      <input type="file" name="image" required>
+
+      <label for="message">Message à cacher :</label>
+      <input type="text" name="message" placeholder="Entrez votre message" required>
+
+      <label for="encoding">Méthode d'encodage :</label>
+      <select name="encoding" required>
+        <option value="">-- Choisissez un encodage --</option>
+        <option value="base64">Base64</option>
+        <option value="binary">Binaire</option>
+      </select>
+
+      <input type="submit" value="Cacher le message">
+    </form>
+
+    <div class="message">
+      <p>L'image générée contiendra votre message encodé.</p>
+    </div>
+
+    <a href="index.html">← Retour à l'accueil</a>
+  </div>
+</body>
+</html>
