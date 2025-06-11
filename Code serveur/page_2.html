@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <title>Page 2 - Extraire un flag des métadonnées</title>
+  <link rel="stylesheet" href="css/theme_css.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🔍 Extraction d’un flag caché</h1>
+    <p>
+      Téléversez une image pour analyser ses métadonnées et extraire un flag (au format <code>flag{...}</code>) si présent.
+    </p>
+
+    <form action="/cgi-bin/extract_flag.py" method="post" enctype="multipart/form-data">
+      <label for="image">Choisissez une image :</label>
+      <input type="file" name="image" id="image" accept="image/*" required />
+      <input type="submit" value="Extraire le flag" />
+    </form>
+
+    <a href="index.html">← Retour à l'accueil</a>
+  </div>
+</body>
+</html>
