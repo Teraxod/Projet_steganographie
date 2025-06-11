@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Page 8 - Décoder un message caché dans une image</title>
+  <link rel="stylesheet" href="css/theme_css.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🕵️‍♂️ Décoder un message caché</h1>
+
+    <div class="banner">
+      Page – Téléversez une image contenant un message dissimulé à décoder.
+    </div>
+
+    <div class="form-container">
+      <form action="/cgi-bin/extract_flag_from_image.py" method="post" enctype="multipart/form-data">
+        <label for="image">Image contenant le message :</label>
+        <input type="file" name="image" required>
+
+        <input type="submit" value="Décoder le message">
+      </form>
+
+      <div class="message">
+        <p>Le message caché apparaîtra ici après décodage.</p>
+      </div>
+
+      <p style="margin-top: 1rem;">
+        <a href="index.html">← Retour à l'accueil</a>
+      </p>
+    </div>
+
+    <p class="footer">© 2025 - Interface de démonstration sur la stéganographie</p>
+  </div>
+</body>
+</html>
