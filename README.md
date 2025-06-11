@@ -63,7 +63,7 @@ http://<adresse_ip_de_ta_machine>
 
 - Vous pouvez réaliser un test simple avec une page personnalisée : 
 ```bash
-echo "Hello World from Apache!" | sudo tee /var/www/html/index.html
+echo "Hello World !" | sudo tee /var/www/html/index.html
 ```
 _(Recharger la page à chaque modification)_
 
