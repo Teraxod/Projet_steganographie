@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Page 5 - Cacher une image dans une autre image</title>
+  <link rel="stylesheet" href="css/theme_css.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🖼️ Cacher une image dans une autre image</h1>
+
+    <div class="banner">
+     Téléversez deux images : une comme base, l'autre à cacher.
+    </div>
+
+    <div class="form-container">
+      <form action="/cgi-bin/hide_image_in_png.py" method="post" enctype="multipart/form-data">
+        <label for="image_base">Image de base (PNG) :</label>
+        <input type="file" name="image_base" accept="image/png" required>
+
+        <label for="image_cachee">Image à cacher :</label>
+        <input type="file" name="image_cachee" accept="image/*" required>
+
+        <input type="submit" value="Cacher l'image">
+      </form>
+
+      <p style="margin-top: 1rem;">
+        <a href="index.html">← Retour à l'accueil</a>
+      </p>
+    </div>
+
+    <p class="footer">© 2025 - Interface de démonstration sur la stéganographie</p>
+  </div>
+</body>
+</html>
