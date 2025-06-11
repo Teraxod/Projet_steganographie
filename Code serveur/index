@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Portail Stéganographie</title>
+  <link rel="stylesheet" href="css/theme_css.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🕵️‍♂️ Portail Stéganographie</h1>
+    <p>
+      Bienvenue sur l'interface Apache dédiée à la découverte et la manipulation de la stéganographie.
+      Cette page propose plusieurs démonstrations pour cacher et révéler des informations secrètes dans les images.
+    </p>
+
+    <div class="link-section">
+      <h2>🧭 Navigation :</h2>
+      <ul>
+        <li><a href="page_1.html">Cacher un mot dans une image</a></li>
+        <li><a href="page_2.html">Extraire un flag des métadonnées EXIF</a></li>
+        <li><a href="page_3.html">Cacher un flag dans les strings</a></li>
+        <li><a href="page_4.html">Trouver un flag dans les strings</a></li>
+        <li><a href="page_5.html">Cacher une image dans une image</a></li>
+        <li><a href="page_6.html">Extraire une image cachée</a></li>
+        <li><a href="page_7.html">Cacher un flag encodé texte</a></li>
+        <li><a href="page_8.html">Décoder un flag caché</a></li>
+        <li><a href="page_9.html">Cacher un fichier texte dans une image</a></li>
+      </ul>
+    </div>
+
+    <p class="footer">© 2025 - Interface de démonstration sur la stéganographie</p>
+  </div>
+</body>
+</html>
