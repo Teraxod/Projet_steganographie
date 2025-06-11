@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Page 3 - Cacher un mot dans les données hexadécimales d'une image</title>
+  <link rel="stylesheet" href="css/theme_css.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Cacher un mot dans les données hexadécimales d'une image</h1>
+    <div class="banner">
+      Injectez un mot dans le binaire de l’image (non visible visuellement)
+    </div>
+
+    <form action="/cgi-bin/hide_in_strings.py" method="post" enctype="multipart/form-data">
+      <label for="image">Choisissez une image :</label>
+      <input type="file" name="image" required>
+
+      <label for="mot">Mot à cacher (ex: flag{...}) :</label>
+      <input type="text" name="mot" required>
+
+      <input type="submit" value="Cacher le mot dans les strings">
+    </form>
+
+    <a class="back-link" href="index.html">← Retour à l'accueil</a>
+  </div>
+</body>
+</html>
