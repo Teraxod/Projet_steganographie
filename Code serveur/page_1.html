@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <title>Page 1 - Cacher un mot dans l'image</title>
+  <link rel="stylesheet" href="css/theme_css.css" />
+</head>
+<body>
+  <div class="main_page">
+    <div class="header">
+      <h1>Cacher un mot dans l'image</h1>
+    </div>
+    <div class="banner">
+      Téléchargez une image et cachez un mot dans ses métadonnées EXIF
+    </div>
+
+    <div class="form-container">
+      <form action="/cgi-bin/process_upload.py" method="post" enctype="multipart/form-data">
+        <label for="image">Choisissez une image :</label><br />
+        <input type="file" name="image" id="image" accept="image/*" required /><br /><br />
+
+        <label for="mot">Mot à cacher (format : flag{....}) :</label><br />
+        <input type="text" name="mot" id="mot" placeholder="flag{exemple}" required /><br /><br />
+
+        <input type="submit" value="Cacher le mot dans l'image" />
+      </form>
+      <a class="back-link" href="index.html">← Retour à l'accueil</a>
+    </div>
+  </div>
+</body>
+</html>
