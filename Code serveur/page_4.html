@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Page 4 - Extraire un flag caché dans l'image</title>
+  <link rel="stylesheet" href="css/theme_css.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🧩 Extraire un flag caché</h1>
+
+    <div class="banner">
+      Page 4 – Téléversez une image PNG pour extraire un flag depuis des chaînes intégrées.
+    </div>
+
+    <div class="form-container">
+      <form action="/cgi-bin/extract_flag_from_strings.py" method="post" enctype="multipart/form-data">
+        <label for="image">Choisissez une image :</label>
+        <input type="file" name="image" required>
+
+        <input type="submit" value="Extraire le flag de l'image">
+      </form>
+
+      <p style="margin-top: 1rem;">
+        <a href="index.html">← Retour à l'accueil</a>
+      </p>
+    </div>
+
+    <p class="footer">© 2025 - Interface de démonstration sur la stéganographie</p>
+  </div>
+</body>
+</html>
