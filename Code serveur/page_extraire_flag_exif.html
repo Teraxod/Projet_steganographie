@@ -12,7 +12,7 @@
       Téléversez une image pour analyser ses métadonnées et extraire un flag (au format <code>flag{...}</code>) si présent.
     </p>
 
-    <form action="/cgi-bin/extract_flag.py" method="post" enctype="multipart/form-data">
+    <form action="/cgi-bin/exiftool/extraire_flag_exif.py" method="post" enctype="multipart/form-data">
       <label for="image">Choisissez une image :</label>
       <input type="file" name="image" id="image" accept="image/*" required />
       <input type="submit" value="Extraire le flag" />
