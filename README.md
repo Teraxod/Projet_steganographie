@@ -113,4 +113,4 @@ http://localhost/cgi-bin/mon_script.py
 Tu devrais voir : "**Script Python CGI fonctionne !**"
 
 
-**Lorsque tout cela fonctionne, nous  **
+**Lorsque tout cela fonctionne, nous allons passer à l'étape suivante, celle qui nous permettra de mettre en place notre moteur de recherche stéganographique **
