@@ -65,7 +65,7 @@ http://<adresse_ip_de_ta_machine>
 ```bash
 echo "Hello World !" | sudo tee /var/www/html/index.html
 ```
-_(Recharger la page à chaque modification)_
+_(Recharger la page web à chaque modification)_
 
 
 2. Mise en place de **CGI**
