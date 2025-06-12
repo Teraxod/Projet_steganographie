@@ -11,9 +11,10 @@ Différentes méthodes de stéaganographie sont disponible, l'utilisateur est li
   En prérequis :
   - une machine linux fonctionnelle _(pour le projet nous avons utilisée une machine vituelle ubuntu **desktop**, la version **server** n'est pas obligatoire)_
   lien vers l'image ISO que nous avons utilisée : https://releases.ubuntu.com/releases/24.04.2/
+  - Savoir utiliser un **CLI** linux
   - savoir utiliser un éditeur de texte en ligne de commande pour gagner du temps (nano,vim,etc)
 
-1. Commencer par installer apache server sur une machine linux :
+**1. Commencer par installer apache server sur une machine linux :**
 ```bash
 sudo apt update
 sudo apt install apache2 -y
@@ -70,7 +71,7 @@ echo "Hello World !" | sudo tee /var/www/html/index.html
 _(Recharger la page web à chaque modification)_
 
 
-2. Mise en place de **CGI**
+**2. Mise en place de _CGI_**
 
 Une fois que tout cela fonctionne, on va essayer de faire communiquer la page web avec un script python, pour ce faire, nous allons utiliser **CGI** (Common Gateway Interface) qui est l'interface de passerelle commune, ou CGI, est un ensemble de normes qui définissent la manière dont les informations sont échangées entre le serveur Web et un script personnalisé.
 
@@ -117,7 +118,28 @@ sudo chmod +x /usr/lib/cgi-bin/mon_script.py
 ```bash
 http://localhost/cgi-bin/mon_script.py
 ```
-Tu devrais voir : "**Script Python CGI fonctionne !**"
+Tu devrais voir apparaître sur ta page web : "**Script Python CGI fonctionne !**" 
 
 
-**Lorsque tout cela fonctionne, nous allons passer à l'étape suivante, celle qui nous permettra de mettre en place notre moteur de recherche stéganographique **
+Lorsque tout cela fonctionne, nous allons passer à l'étape suivante, celle qui nous permettra de mettre en place notre moteur de recherche stéganographique
+
+
+**3. Mise en place de notre moteur de recherche stéganographique**
+
+Nous allons commencer par installer un éditeur de code pour pouvoir y mettre nos pages html et nos scripts en python, ici nous avons ultiisé _**Visual Studio Code**_
+
+- Pour commencer, nous allons installer les dépendances nécessaires :
+```bash
+sudo apt install wget gpg -y
+```
+Ajouter la clé GPG de Microsoft :
+```bash
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
+```
+Ajouter le dépôt officiel VS Code :
+```bash
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] \
+https://packages.microsoft.com/repos/vscode stable main" | \
+sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null
+```
