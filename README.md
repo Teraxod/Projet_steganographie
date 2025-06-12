@@ -84,10 +84,15 @@ sudo a2enmod cgi
 sudo systemctl restart apache2
 ```
 
-- Vérifier que le dossier _/usr/lib/cgi-bin_ est bien utilisé, ce dossier est généralement déjà configuré par défaut dans le fichier :
+- Vérifier que le dossier _/usr/lib/cgi-bin_ est bien utilisé, ce dossier est généralement déjà configuré par défaut dans le fichier, nous allons nous rendre dans _/etc/apache2/conf-available_  :
 ```bash
-/etc/apache2/conf-available/serve-cgi-bin.conf
+cd /etc/apache2/conf-available
 ```
+- Puis faire un _**ls**_ :
+```bash
+ls
+```
+- Et vous devriez touver un dossier qui s'appelle : _serve-cgi-bin.conf_
 
 - Placer un script dans /usr/lib/cgi-bin/ avec par exemple _test.py_ :
 ```bash
