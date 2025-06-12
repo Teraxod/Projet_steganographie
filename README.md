@@ -9,7 +9,7 @@ Différentes méthodes de stéaganographie sont disponible, l'utilisateur est li
 - Voici les étapes à suivre pour mettre en place le serveur.
 
   En prérequis :
-  - une machine linux fonctionnelle _(pour le projet nous avons utilisée une machine vituelle ubuntu **desktop**, la version **server** n'est pas obligatoire)_
+  - une machine linux fonctionnelle _(pour le projet nous avons utilisée une machine virtuelle ubuntu **desktop**, la version **server** n'est pas obligatoire)_
   lien vers l'image ISO que nous avons utilisée : https://releases.ubuntu.com/releases/24.04.2/
   - Savoir utiliser un **CLI** linux
   - savoir utiliser un éditeur de texte en ligne de commande pour gagner du temps (nano,vim,etc)
