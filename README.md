@@ -49,9 +49,9 @@ sudo systemctl disable apache2
 ```bash
 http://localhost/
 ```
-- Ou depuis une autre machine du réseau : 
+- Egalement avec votre adresse ip de la machine (votre page sera alors visible par vous et par une autre machine du même réseau) : 
 ```bash
-http://<adresse_ip_de_ta_machine>
+http://<adresse_ip_de_ta_machine_serveur>
 ```
 
 - Le répertoire Web par défaut est : 
