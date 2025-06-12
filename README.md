@@ -132,14 +132,26 @@ Nous allons commencer par installer un éditeur de code pour pouvoir y mettre no
 ```bash
 sudo apt install wget gpg -y
 ```
-Ajouter la clé GPG de Microsoft :
+- Ajouter la clé GPG de Microsoft :
 ```bash
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
 ```
-Ajouter le dépôt officiel VS Code :
+- Ajouter le dépôt officiel VS Code :
 ```bash
 echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] \
 https://packages.microsoft.com/repos/vscode stable main" | \
 sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null
 ```
+- Mettre à jour et installer VS Code :
+```bash
+sudo apt update
+sudo apt install code -y
+```
+- Lance VS Code :
+```bash
+code
+```
+Ton VS Code devrait se lancer.
+
+Une fois que 
