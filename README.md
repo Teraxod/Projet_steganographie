@@ -9,7 +9,7 @@ Différentes méthodes de stéaganographie sont disponible, l'utilisateur est li
 - Voici les étapes à suivre pour mettre en place le serveur.
 
   En prérequis, une machine linux fonctionnelle _(pour le projet nous avons utilisée une machine vituelle ubuntu **desktop**, la version **server** n'est pas obligatoire)_
-  lien vers l'image ISO : https://releases.ubuntu.com/releases/24.04.2/
+  lien vers l'image ISO que nous avons utilisée : https://releases.ubuntu.com/releases/24.04.2/
 
 1. Commencer par installer apache server sur une machine linux :
 ```bash
