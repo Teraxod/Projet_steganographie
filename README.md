@@ -124,9 +124,9 @@ Tu devrais voir apparaître sur ta page web : "**Script Python CGI fonctionne !*
 Lorsque tout cela fonctionne, nous allons passer à l'étape suivante, celle qui nous permettra de mettre en place notre moteur de recherche stéganographique
 
 
-**3. Mise en place de notre moteur de recherche stéganographique**
+**3. Installation d'un éditeur de code**
 
-Nous allons commencer par installer un éditeur de code pour pouvoir y mettre nos pages html et nos scripts en python, ici nous avons ultiisé _**Visual Studio Code**_
+Nous allons commencer par installer un éditeur de code pour pouvoir y mettre nos pages **html** et nos scripts en **python**, ici nous avons ultilisé _**Visual Studio Code**_
 
 - Pour commencer, nous allons installer les dépendances nécessaires :
 ```bash
@@ -154,4 +154,6 @@ code
 ```
 Ton VS Code devrait se lancer.
 
-Une fois que 
+
+**4. Mise en place du moteur de recherche stéganographique**
+
