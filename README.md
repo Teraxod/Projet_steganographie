@@ -24,28 +24,23 @@ sudo apt install apache2 -y
 ```bash
 sudo systemctl status apache2
 ```
-
-- S'il n'est pas actif : 
+S'il n'est pas actif : 
 ```bash
 sudo systemctl start apache2
 ```
-
-- Pour l'arrêter :
+Pour l'arrêter :
 ```bash
 sudo systemctl stop apache2
 ```
-
-- Pour le redémarrer : 
+Pour le redémarrer : 
 ```bash
 sudo systemctl restart apache2
 ```
-
-- Si vous voulez que votre service apache se lance automatiquement au démarrage du système :
+Si vous voulez que votre service apache se lance automatiquement au démarrage du système :
 ```bash
 sudo systemctl enable apache2
 ```
-
-- Pour désactiver le démarrage automatique de Apache2 au démarrage du système : 
+Pour désactiver le démarrage automatique de Apache2 au démarrage du système : 
 ```bash
 sudo systemctl disable apache2
 ```
