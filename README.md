@@ -147,7 +147,7 @@ sudo apt install code -y
 ```bash
 code
 ```
-Ton VS Code devrait se lancer.
+Votre VS Code devrait se lancer.
 
 
 **4. Mise en place du moteur de recherche stéganographique**
