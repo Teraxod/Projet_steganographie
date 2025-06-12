@@ -82,7 +82,7 @@ sudo a2enmod cgi
 sudo systemctl restart apache2
 ```
 
-- Vérifier que le dossier _/usr/lib/cgi-bin_ est bien utilisé, ce dossier est généralement déjà configuré par défaut dans le fichier, nous allons nous rendre dans _/etc/apache2/conf-available_  :
+- Vérifier que le dossier _/usr/lib/cgi-bin_ est bien utilisé, ce dossier est généralement déjà configuré par défaut dans le fichier, nous allons donc nous rendre dans _/etc/apache2/conf-available_  pour vérifier qu'il est bien présent :
 ```bash
 cd /etc/apache2/conf-available
 ```
