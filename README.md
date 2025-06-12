@@ -8,8 +8,10 @@ Différentes méthodes de stéaganographie sont disponible, l'utilisateur est li
 
 - Voici les étapes à suivre pour mettre en place le serveur.
 
-  En prérequis, une machine linux fonctionnelle _(pour le projet nous avons utilisée une machine vituelle ubuntu **desktop**, la version **server** n'est pas obligatoire)_
+  En prérequis :
+  - une machine linux fonctionnelle _(pour le projet nous avons utilisée une machine vituelle ubuntu **desktop**, la version **server** n'est pas obligatoire)_
   lien vers l'image ISO que nous avons utilisée : https://releases.ubuntu.com/releases/24.04.2/
+  - savoir utiliser un éditeur de texte en ligne de commande pour gagner du temps (nano,vim,etc)
 
 1. Commencer par installer apache server sur une machine linux :
 ```bash
@@ -92,11 +94,11 @@ cd /etc/apache2/conf-available
 ```bash
 ls
 ```
-- Et vous devriez touver un dossier qui s'appelle : _serve-cgi-bin.conf_
+Et vous devriez touver un dossier qui s'appelle : _serve-cgi-bin.conf_
 
-- Placer un script dans /usr/lib/cgi-bin/ avec par exemple _test.py_ :
+- Maintenant, placer un script dans /usr/lib/cgi-bin/ avec par exemple _mon_script.py_ :
 ```bash
-sudo nano /usr/lib/cgi-bin/test.py
+sudo nano /usr/lib/cgi-bin/mon_script.py
 ```
 
 - Contenu du script :
