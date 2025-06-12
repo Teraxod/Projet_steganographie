@@ -45,7 +45,7 @@ Pour désactiver le démarrage automatique de Apache2 au démarrage du système 
 sudo systemctl disable apache2
 ```
 
-- Ensuite tu peux tester en tapant ton adresse local dans le navigateur et la page par défaut d'Apache2 devrait être affichée : 
+- Ensuite vous pouvez tester en tapant votre adresse ip local _(127.0.0.1)_ dans le navigateur et la page par défaut d'Apache2 devrait être affichée : 
 ```bash
 http://localhost/
 ```
