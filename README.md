@@ -11,8 +11,8 @@ Différentes méthodes de stéaganographie sont disponible, l'utilisateur est li
   En prérequis :
   - Avoir une machine linux fonctionnelle _(pour le projet nous avons utilisée une machine virtuelle ubuntu **desktop**, la version **server** n'est pas obligatoire)_
   lien vers l'image ISO que nous avons utilisée : https://releases.ubuntu.com/releases/24.04.2/
-  - Savoir utiliser un **CLI** linux
-  - savoir utiliser un éditeur de texte en ligne de commande pour gagner du temps (nano,vim,etc)
+  - Savoir utiliser un **CLI** linux (cd, ls, mv, etc...)
+  - savoir utiliser un éditeur de texte en ligne de commande pour gagner du temps (nano, vim, etc...)
 
 **1. Commencer par installer apache server sur une machine linux :**
 ```bash
@@ -92,7 +92,7 @@ ls
 ```
 Et vous devriez touver un dossier qui s'appelle : _serve-cgi-bin.conf_
 
-- Maintenant, placer un script dans /usr/lib/cgi-bin/ avec par exemple _mon_script.py_ :
+- Maintenant, placer un script dans _/usr/lib/cgi-bin/_ avec par exemple _mon_script.py_ :
 ```bash
 sudo nano /usr/lib/cgi-bin/mon_script.py
 ```
@@ -154,7 +154,51 @@ Votre VS Code devrait se lancer.
 
 Maintenant que nous avons tous les outils en main, il ne nous reste plus que la mise en place, pour cela nous allons télécharger les fichiers mis à disposition sur github :
 
-- Soit vous téléchargé le dossier en format **zip** : 
+- Soit vous téléchargé le dossier en format **zip** en cliquant sur "<> Code" en vert : 
 
 ![image](https://github.com/user-attachments/assets/09facc88-0b06-46fa-8268-f1629441cd35)
+
+- Soit en le téléchargeant en ligne de commande, nous allons commencer par installer **_git_** :
+```bash
+sudo apt install git
+```
+- Une fois **_git_** installé, tapé cette commande sur votre **CLI** :
+```bash
+git clone https://github.com/Teraxod/Projet_steganographie.git
+```
+Cela va télécharger tous les dossiers à l'endroit où vous avez executé la commande.
+
+- Ensuite, aller dans le dossier "Projet_steganographie"
+- Une fois dans le dossier, nous allons déplacer chaque sous dossier dans son répertoire, le sous dossier "Code serveur" dans le répertoire _/var/www/html_ et le sous dossier "script" dans _/usr/lib/cgi-bin_
+
+Pour ce faire, executer les commandes suivantes : 
+```bash
+sudo mv Code\ serveur/ /var/www/html
+```
+et :
+```bash
+sudo mv script/ /usr/lib/cgi-bin/
+```
+Ensuite vérifié qu'ils aient bien été déplacés.
+Pour aller dans le dossier code serveur, pensez à mettre les apostrophes : _cd 'Code serveur'_
+
+- Maintenant, nous voulons ouvrir ces 2 dossiers dans VS Code, sauf que ces 2 dossiers ne pourrons pas être ouvert depuis VS Code directement à cause des droits **root** où sont stockés nos fichier, on va donc commencer par ouvrir notre dossier fichier :
+![image](https://github.com/user-attachments/assets/8ff9ebd4-dc0b-4b41-971a-d69b31ee868d)
+
+
+
+
+
+
+Une fois ouvert vous serez à cette endroit : 
+![image](https://github.com/user-attachments/assets/39e23986-223c-4b95-ba5f-4fbfab6ad34c)
+
+
+Allez dans la barre de recherche et tapez ceci : /
+![image](https://github.com/user-attachments/assets/d7bc8deb-abcf-47b2-8167-c68ffde0850c)
+
+
+
+
+Une fois fait, vous aurez accés aux dossier stockés dans la racine, vous n'avez plus qu'à selectionner le fichier 
 
