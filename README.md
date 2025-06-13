@@ -154,5 +154,6 @@ Votre VS Code devrait se lancer.
 
 Maintenant que nous avons tous les outils en main, il ne nous reste plus que la mise en place, pour cela nous allons télécharger les fichiers mis à disposition sur github :
 
-- Soit vous téléchargé le dossier en format **zip**
+- Soit vous téléchargé le dossier en format **zip** : 
+![image](https://github.com/user-attachments/assets/09facc88-0b06-46fa-8268-f1629441cd35)
 
