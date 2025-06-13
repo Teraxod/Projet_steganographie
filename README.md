@@ -388,7 +388,7 @@ Pour modifier vos fichiers sur VS Code que ce soit en **html** ou en **python**,
 
 - Faites "Retry as sudo", puis entrez votre mot de passe **root**
 
-- Pour savoir si votre fichier à été modifier et à besoin d'être sauvegardé, vous le verrez grâce à une petite pastille blanche :
+- Pour savoir si votre fichier à été modifier et à besoin d'être sauvegardé, vous le verrez grâce à une petite pastille blanche à dans l'onglet à coté du nom du fichier :
 
 
 
