@@ -250,4 +250,6 @@ Maintenant, rendez sur votre page web et rafraichissez là et vous devriez voir 
 
 ![image](https://github.com/user-attachments/assets/ffbe8874-8389-428a-9763-482527b53ae6)
 
+Relancer ensuite votre VS Code
+
 
