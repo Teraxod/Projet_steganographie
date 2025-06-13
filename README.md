@@ -190,7 +190,12 @@ Pour aller dans le dossier code serveur, pensez à mettre les apostrophes : _cd 
 
 
 
+
+
+
 Une fois ouvert vous serez à cette endroit : 
+
+
 ![image](https://github.com/user-attachments/assets/39e23986-223c-4b95-ba5f-4fbfab6ad34c)
 
 
