@@ -266,3 +266,111 @@ Maintenant vous pouvez cliquer sur les liens et de nouvelles pages devront s'aff
 
 ![image](https://github.com/user-attachments/assets/46dde51b-6da9-4274-93a9-70b2429409f8)
 
+
+Nous avons bientôt fini, il ne nous manque plus qu'a faire intéragir notre serveur avec nos scripts en python 
+
+- Pour commencer nous allons nous rendre dans le fichier _/etc/apache2/conf-available/serve-cgi-bin.conf_
+C’est un fichier de configuration Apache (souvent dans /etc/apache2/conf-available/) qui contient les directives pour activer et gérer le dossier des scripts CGI.
+```bash
+sudo nano /etc/apache2/conf-available/serve-cgi-bin.conf
+```
+
+Vous allez avoir ça : 
+```bash
+<IfModule mod_alias.c>
+    <IfModule mod_cgi.c>
+        Define ENABLE_USR_LIB_CGI_BIN
+    </IfModule>
+
+    <IfModule mod_cgid.c>
+        Define ENABLE_USR_LIB_CGI_BIN
+    </IfModule>
+
+    <IfDefine ENABLE_USR_LIB_CGI_BIN>
+        ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
+        <Directory "/usr/lib/cgi-bin">
+            AllowOverride None
+            Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+            Require all granted
+        </Directory>
+    </IfDefine>
+</IfModule>
+```
+Et là vous allez ajouter ce : 
+```bash
+ScriptAlias /scripts/ /usr/lib/cgi-bin/scripts/
+```
+Il dit à Apache : “quand quelqu’un visite /scripts/..., cherche les fichiers dans /usr/lib/cgi-bin/scripts/”.
+
+Et rajoutez ce bloc : 
+```bash
+<Directory "/usr/lib/cgi-bin/scripts">
+    AllowOverride None
+    Options +ExecCGI -Indexes +SymLinksIfOwnerMatch
+    AddHandler cgi-script .py
+    Require all granted
+</Directory
+```
+Il autorise l'exécution des scripts _**.py**_ dans ce dossier (et ses sous-dossiers).
+
+- Ce qui va vous donnez ceci : 
+```bash
+<IfModule mod_alias.c>
+    <IfModule mod_cgi.c>
+        Define ENABLE_USR_LIB_CGI_BIN
+    </IfModule>
+
+    <IfModule mod_cgid.c>
+        Define ENABLE_USR_LIB_CGI_BIN
+    </IfModule>
+
+    <IfDefine ENABLE_USR_LIB_CGI_BIN>
+        ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
+        <Directory "/usr/lib/cgi-bin">
+            AllowOverride None
+            Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+            Require all granted
+        </Directory>
+
+        # 🎯 AJOUT POUR PRENDRE EN CHARGE /usr/lib/cgi-bin/scripts
+        ScriptAlias /scripts/ /usr/lib/cgi-bin/scripts/
+        <Directory "/usr/lib/cgi-bin/scripts">
+            AllowOverride None
+            Options +ExecCGI -Indexes +SymLinksIfOwnerMatch
+            AddHandler cgi-script .py
+            Require all granted
+        </Directory>
+    </IfDefine>
+</IfModule>
+```
+- On va rendre tous les scripts exécutables :
+```bash
+sudo find /usr/lib/cgi-bin/script/ -type f -name "*.py" -exec chmod +x {} \;
+```
+- Assurer la bonne propriété des fichiers:
+```bash
+sudo chown -R www-data:www-data /usr/lib/cgi-bin/script/
+```
+- Redémarrer Apache pour appliquer la nouvelle config :
+```bash
+sudo systemctl reload apache2
+```
+- Tu peux tester en mettant ton script dans le navigateur :
+```bash
+http://<ton-ip-ou-domaine>/script/exiftool/cache_flag_exif.py
+```
+Ce qui va te renvoyer : 
+
+
+![image](https://github.com/user-attachments/assets/ed8b8790-d84d-409d-807c-888cad175372)
+
+
+- Maintenant testez directement dans la page web, en completant le formulaire (toujours sur le premier lien)
+ Et on obtient ça :
+
+
+
+![image](https://github.com/user-attachments/assets/a44fd16e-9bfb-422f-9b8f-664b88c5ebfd)
+
+Avec la possiblité de téléchargée l'image et de revenir à l'accueil
+
