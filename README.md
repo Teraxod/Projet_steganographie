@@ -183,12 +183,9 @@ Ensuite vérifié qu'ils aient bien été déplacés.
 Pour aller dans le dossier code serveur, pensez à mettre les apostrophes : _cd 'Code serveur'_
 
 - Maintenant, nous voulons ouvrir ces 2 dossiers dans VS Code, sauf que ces 2 dossiers ne pourrons pas être ouvert depuis VS Code directement à cause des droits **root** où sont stockés nos fichier, on va donc commencer par ouvrir notre dossier fichier :
+
+
 ![image](https://github.com/user-attachments/assets/8ff9ebd4-dc0b-4b41-971a-d69b31ee868d)
-
-
-
-
-
 
 
 
@@ -200,6 +197,8 @@ Une fois ouvert vous serez à cette endroit :
 
 
 Allez dans la barre de recherche et tapez ceci : /
+
+
 ![image](https://github.com/user-attachments/assets/d7bc8deb-abcf-47b2-8167-c68ffde0850c)
 
 
