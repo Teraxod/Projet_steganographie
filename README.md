@@ -374,3 +374,26 @@ Ce qui va te renvoyer :
 
 Avec la possiblité de téléchargée l'image et de revenir à l'accueil
 
+Si cela fonctionne, votre serveur est fonctionnel !! 
+
+Pour ouvrir votre dossier avec tous les scripts python, faites le de la même manière que pour ouvrir celui du **html**
+Pour modifier vos fichiers sur VS Code que ce soit en **html** ou en **python**, vous devrez le faire en mode sudo, comme ceci : 
+
+- Faire un _**CTRL+S**_ pour sauvegarder, puis vous aurez cet avertissement :
+
+
+
+![image](https://github.com/user-attachments/assets/ba21c914-e1f4-4a33-8a09-121f9a3eeed9)
+
+
+- Faites "Retry as sudo", puis entrez votre mot de passe **root**
+
+- Pour savoir si votre fichier à été modifier et à besoin d'être sauvegardé, vous le verrez grâce à une petite pastille blanche :
+
+
+
+![image](https://github.com/user-attachments/assets/712cff3c-2366-4004-91e3-cd879307a026)
+
+
+
+
