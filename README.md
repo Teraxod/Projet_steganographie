@@ -262,6 +262,7 @@ Maintenant vous pouvez cliquer sur les liens et de nouvelles pages devront s'aff
 
 
 
-![image](https://github.com/user-attachments/assets/d05b8860-22ec-4981-a0d9-8ceddd51edab)
 
+
+![image](https://github.com/user-attachments/assets/46dde51b-6da9-4274-93a9-70b2429409f8)
 
