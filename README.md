@@ -171,16 +171,20 @@ Cela va télécharger tous les dossiers à l'endroit où vous avez executé la c
 - Ensuite, aller dans le dossier "Projet_steganographie"
 - Une fois dans le dossier, nous allons déplacer chaque sous dossier dans son répertoire, le sous dossier "Code serveur" dans le répertoire _/var/www/html_ et le sous dossier "script" dans _/usr/lib/cgi-bin_
 
+- Nous allons commencer par renommer notre dossier **'Code serveur'** en **Code_serveur** cela nous évitera par la suite d'obtenir des erreurs :
+```bash
+sudo mv 'Code serveur' Code_serveur
+```
+
 Pour ce faire, executer les commandes suivantes : 
 ```bash
-sudo mv Code\ serveur/ /var/www/html
+sudo mv Code_serveur /var/www/html
 ```
 et :
 ```bash
 sudo mv script/ /usr/lib/cgi-bin/
 ```
 Ensuite vérifié qu'ils aient bien été déplacés.
-Pour aller dans le dossier code serveur, pensez à mettre les apostrophes : _cd 'Code serveur'_
 
 - Maintenant, nous voulons ouvrir ces 2 dossiers dans VS Code, sauf que ces 2 dossiers ne pourrons pas être ouvert depuis VS Code directement à cause des droits **root** où sont stockés nos fichier, on va donc commencer par ouvrir notre dossier fichier :
 
@@ -204,5 +208,46 @@ Allez dans la barre de recherche et tapez ceci : /
 
 
 
-Une fois fait, vous aurez accés aux dossier stockés dans la racine, vous n'avez plus qu'à selectionner le fichier 
+Une fois fait, vous aurez accés aux dossier stockés dans la racine, vous n'avez plus qu'à vous rendre dans le dossier qui nous intéresse dans _/var/www/html_  : 
+```bash
+/var/www/html
+```
+Vous verrez votre dossier "Code_serveur", selectionnez le dossier, puis faites clique droit "Ouvrir" ensuite "Ouvrir avec" et choissisez **VS Code**
+Au moment de l'ouverture de **VS Code**, vous verrez une petite fenêtre comme ceci : 
+
+
+![image](https://github.com/user-attachments/assets/864a33f1-592f-42ea-ad33-0d91d4e7e0c5)
+
+
+
+Vous cliquez sur "Yes, I trust the authors"
+Et vous aurez accès à tous les fichiers **html** et même le dossier **css**.
+
+- Maintenant nous allons faire en sorte que nos pages s'affichent sur notre page web
+
+Ouvre le fichier de configuration du site par défaut :
+```bash
+sudo nano /etc/apache2/sites-available/000-default.conf
+```
+ Modifie la ligne :
+ ```bash
+DocumentRoot /var/www/html
+```
+en : 
+```bash
+DocumentRoot /var/www/html/Code_serveur
+```
+
+Enregistrer et fermer le fichier
+
+Redémarre Apache :
+```bash
+sudo systemctl restart apache2
+```
+
+Maintenant, rendez sur votre page web et rafraichissez là et vous devriez voir apparaître ça : 
+
+
+![image](https://github.com/user-attachments/assets/ffbe8874-8389-428a-9763-482527b53ae6)
+
 
