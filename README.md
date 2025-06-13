@@ -252,4 +252,16 @@ Maintenant, rendez sur votre page web et rafraichissez là et vous devriez voir 
 
 Relancer ensuite votre VS Code
 
+- Pour être sûr qu'il n'y ait pas de problème de droit, nous allons taper ces commandes dans le terminal :
+```bash
+sudo chmod -R 755 /var/www/html/Code_serveur
+sudo chown -R www-data:www-data /var/www/html/Code_serveur
+```
+
+Maintenant vous pouvez cliquer sur les liens et de nouvelles pages devront s'afficher (exemple avec le lien : cacher un mot dans une image) :
+
+
+
+![image](https://github.com/user-attachments/assets/d05b8860-22ec-4981-a0d9-8ceddd51edab)
+
 
