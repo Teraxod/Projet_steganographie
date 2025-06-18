@@ -332,7 +332,7 @@ Il autorise l'exécution des scripts _**.py**_ dans ce dossier (et ses sous-doss
             Require all granted
         </Directory>
 
-        # 🎯 AJOUT POUR PRENDRE EN CHARGE /usr/lib/cgi-bin/scripts
+        # AJOUT POUR PRENDRE EN CHARGE /usr/lib/cgi-bin/scripts
         ScriptAlias /scripts/ /usr/lib/cgi-bin/scripts/
         <Directory "/usr/lib/cgi-bin/scripts">
             AllowOverride None
