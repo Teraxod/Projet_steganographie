@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Page - Générer un mot caché dans un spectrogramme audio</title>
+    <link rel="stylesheet" href="css/theme_css.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>🎵 Générer un audio avec un mot caché dans le spectrogramme</h1>
+        <div class="banner">
+            Entrez le mot à cacher, cliquez, et téléchargez le fichier .wav à ouvrir dans Audacity/Sonic Visualizer !
+        </div>
+        
+        <!-- Ici, remplace juste cette partie -->
+        <form action="/cgi-bin/cache_mot_audio.py" method="post">
+            <label for="mot">Mot à cacher dans le spectrogramme :</label>
+            <input type="text" name="mot" id="mot" required>
+            <br>
+            <label for="nom_audio">Nom du fichier audio (.wav) :</label>
+            <input type="text" name="nom_audio" id="nom_audio" value="cache.wav" required>
+            <br>
+            <input type="submit" value="🎼 Générer l'audio">
+        </form>
+        <!-- Fin remplacement formulaire -->
+
+        <a href="/index.html">~ Retour à l'accueil</a>
+    </div>
+</body>
+</html>
