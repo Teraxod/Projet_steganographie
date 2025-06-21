@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Extraire un fichier texte d'une image</title>
+    <link rel="stylesheet" href="css/theme_css.css" />
+</head>
+<body>
+    <div class="container">
+        <h2>🕵️ Extraire un fichier texte caché dans une image</h2>
+        <form method="POST" action="/cgi-bin/page_extraire_fichier_texte_in_image.py" enctype="multipart/form-data">
+            <input type="file" name="image" accept="image/png,image/jpeg" required><br>
+            <input type="text" name="out_txt" placeholder="Nom du fichier extrait (ex: extrait.txt)" value="extrait.txt" required><br>
+            <button type="submit">🔎 Extraire le fichier texte</button>
+        </form>
+        <br>
+        <a href="/index.html">← Retour à l'accueil</a>
+    </div>
+</body>
+</html>
