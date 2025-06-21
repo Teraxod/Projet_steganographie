@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Décoder un mot caché (whitespace)</title>
+    <link rel="stylesheet" href="css/theme_css.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>🕵️‍♂️ Décoder un mot caché par whitespace</h1>
+        <div class="banner">
+            Téléverse un fichier texte obtenu via la stéganographie whitespace pour extraire le mot caché.
+        </div>
+        <form action="/cgi-bin/extraire_whitespace.py" method="post" enctype="multipart/form-data">
+            <label for="fichier">Fichier texte à décoder :</label>
+            <input type="file" name="fichier" id="fichier" accept=".txt" required>
+            <input type="submit" value="Décoder le mot">
+        </form>
+        <a href="/index.html">← Retour à l'accueil</a>
+    </div>
+</body>
+</html>
