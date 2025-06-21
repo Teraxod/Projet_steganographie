@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Extraire le mot caché d’un audio WAV</title>
+    <link rel="stylesheet" href="css/theme_css.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>🔎 Extraire le mot d’un spectrogramme audio</h1>
+        <div class="banner">
+            Upload ton <b>.wav</b> contenant un mot caché dans le spectrogramme pour voir/lire le mot !
+        </div>
+        <form action="/cgi-bin/extraire_mot_audio.py" method="post" enctype="multipart/form-data">
+            <label for="audio">Fichier .wav :</label>
+            <input type="file" name="audio" id="audio" accept=".wav,audio/wav" required>
+            <label for="img_out">Nom du fichier image (.png) :</label>
+            <input type="text" name="img_out" id="img_out" value="trouve.png" required>
+            <input type="submit" value="Générer et lire le mot caché">
+        </form>
+        <a href="/index.html">← Retour à l'accueil</a>
+    </div>
+</body>
+</html>
