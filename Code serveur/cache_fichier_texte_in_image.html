@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Cacher un fichier texte dans une image</title>
+    <link rel="stylesheet" href="css/theme_css.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>📄 Cacher un fichier texte dans une image contenant un mot </h1>
+        <form action="/cgi-bin/cache_fichier_texte_in_image.py" method="post" enctype="multipart/form-data">
+            <label for="image">Image à utiliser :</label>
+            <input type="file" name="image" id="image" required accept="image/png,image/jpeg">
+
+            <label for="filename">Nom du fichier texte (ex: monflag.txt) :</label>
+            <input type="text" name="filename" id="filename" required pattern=".*\.txt$" placeholder="monfichier.txt">
+
+            <label for="contenu">Mot à cacher :</label>
+            <input type="text" name="contenu" id="contenu" required maxlength="100">
+
+            <input type="submit" value="Cacher le fichier dans l’image">
+        </form>
+        <p><a href="/index.html">← Retour à l’accueil</a></p>
+    </div>
+</body>
+</html>
