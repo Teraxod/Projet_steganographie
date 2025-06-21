@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Stéganographie whitespace - Texte caché</title>
+    <link rel="stylesheet" href="css/theme_css.css" />
+    <style>
+        body { background-color: #121212; color: #e0e0e0; font-family: Arial, sans-serif; }
+        .container { max-width: 600px; margin: auto; padding: 2rem; }
+        label { display: block; margin: 20px 0 5px 0; }
+        input[type="text"] { width: 100%; padding: 7px; border-radius: 6px; border: none; margin-bottom: 16px; }
+        input[type="submit"] { padding: 10px 22px; background: #80cbc4; color: #121212; border: none; border-radius: 8px; font-size: 1.1em; cursor: pointer; transition: background 0.2s;}
+        input[type="submit"]:hover { background: #4db6ac; }
+        .banner { margin-bottom: 2rem; color: #b2dfdb; }
+        a { color: #80cbc4; text-decoration: none; font-weight: bold; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🕵️‍♂️ Générer un texte stéganographié (whitespace)</h1>
+        <div class="banner">
+            Saisis un sujet/style, un mot à cacher, et récupère un texte où le mot est encodé dans les espaces/tabs en fin de ligne.
+        </div>
+        <form action="/cgi-bin/create_whitespace.py" method="post">
+            <label for="prompt">Sujet ou style du texte :</label>
+            <input type="text" name="prompt" id="prompt" required>
+            
+            <label for="mot">Mot à cacher :</label>
+            <input type="text" name="mot" id="mot" required>
+            
+            <label for="output">Nom du fichier texte :</label>
+            <input type="text" name="output" id="output" value="texte_stegano.txt" required>
+            
+            <input type="submit" value="Générer le texte">
+        </form>
+        <a href="/index.html">← Retour à l'accueil</a>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Stéganographie whitespace - Texte caché</title>
+    <link rel="stylesheet" href="css/theme_css.css" />
+    <style>
+        body { background-color: #121212; color: #e0e0e0; font-family: Arial, sans-serif; }
+        .container { max-width: 600px; margin: auto; padding: 2rem; }
+        label { display: block; margin: 20px 0 5px 0; }
+        input[type="text"] { width: 100%; padding: 7px; border-radius: 6px; border: none; margin-bottom: 16px; }
+        input[type="submit"] { padding: 10px 22px; background: #80cbc4; color: #121212; border: none; border-radius: 8px; font-size: 1.1em; cursor: pointer; transition: background 0.2s;}
+        input[type="submit"]:hover { background: #4db6ac; }
+        .banner { margin-bottom: 2rem; color: #b2dfdb; }
+        a { color: #80cbc4; text-decoration: none; font-weight: bold; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🕵️‍♂️ Générer un texte stéganographié (whitespace)</h1>
+        <div class="banner">
+            Saisis un sujet/style, un mot à cacher, et récupère un texte où le mot est encodé dans les espaces/tabs en fin de ligne.
+        </div>
+        <form action="/cgi-bin/whitespace.py" method="post">
+            <label for="prompt">Sujet ou style du texte :</label>
+            <input type="text" name="prompt" id="prompt" required>
+            
+            <label for="mot">Mot à cacher :</label>
+            <input type="text" name="mot" id="mot" required>
+            
+            <label for="output">Nom du fichier texte :</label>
+            <input type="text" name="output" id="output" value="texte_stegano.txt" required>
+            
+            <input type="submit" value="Générer le texte">
+        </form>
+        <a href="/index.html">← Retour à l'accueil</a>
+    </div>
+</body>
+</html>
