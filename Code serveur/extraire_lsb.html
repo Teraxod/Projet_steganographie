@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Analyse d’image LSB</title>
+    <link rel="stylesheet" href="css/theme_css.css" />
+</head>
+<body>
+<div class="container">
+    <h1>🖼️ Analyse LSB (différence ou extraction de flag)</h1>
+    <div class="section">
+        <h2>1️⃣ Différence LSB entre 2 images</h2>
+        <form action="/cgi-bin/extraire_lsb.py" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="action" value="diff">
+            <label>Image originale : <input type="file" name="img1" required accept="image/*"></label><br>
+            <label>Image avec flag (LSB) : <input type="file" name="img2" required accept="image/*"></label><br>
+            <label>Nom du fichier diff (png) : <input type="text" name="output" value="lsb_diff.png" required></label><br>
+            <input type="submit" value="Comparer LSB">
+        </form>
+    </div>
+    <div class="section">
+        <h2>2️⃣ Extraire un message caché (LSB)</h2>
+        <form action="/cgi-bin/resultat_lsb.py" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="action" value="extract">
+            <label>Image avec flag (LSB) : <input type="file" name="img_extract" required accept="image/*"></label><br>
+            <input type="submit" value="Extraire le message caché">
+        </form>
+    </div>
+    <a href="/index.html">← Retour à l'accueil</a>
+</div>
+</body>
+</html>
