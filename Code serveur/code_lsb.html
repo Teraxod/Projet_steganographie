@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Cacher un flag LSB dans une image</title>
+    <link rel="stylesheet" href="css/theme_css.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>🖼️ Cacher un flag dans une image (LSB)</h1>
+        <div class="banner">
+            Téléverse une image (PNG/JPG), choisis le flag à cacher, et télécharge l'image originale & modifiée !
+        </div>
+        <form action="/cgi-bin/code_lsb.py" method="post" enctype="multipart/form-data">
+            <label for="imgfile">Image à uploader :</label>
+            <input type="file" name="imgfile" id="imgfile" accept="image/png, image/jpeg" required>
+            <label for="flag">Flag/message à cacher :</label>
+            <input type="text" name="flag" id="flag" required>
+            <label for="output_img">Nom de l'image de sortie (.png) :</label>
+            <input type="text" name="output_img" id="output_img" value="image_flag.png" required>
+            <input type="submit" value="Cacher le flag et générer les images">
+        </form>
+        <a href="/index.html">← Retour à l'accueil</a>
+    </div>
+</body>
+</html>
