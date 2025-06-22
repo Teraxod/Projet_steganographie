@@ -398,7 +398,7 @@ Pour modifier vos fichiers sur VS Code que ce soit en **html** ou en **python**,
 - Pensez à créer un environnement python pour vous permettre d'installer vos bibliothèque, et à le rajouter en premier dans votre code python, exemple : <img width="152" alt="image" src="https://github.com/user-attachments/assets/55aacdf6-44f5-4aef-b3db-9ff972b1526a" />
 
 
-
+Où "venv" est le nom de notre environnement.
 
 
 
