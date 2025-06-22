@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Décoder un acrostiche</title>
+    <link rel="stylesheet" href="css/theme_css.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Décoder un acrostiche</h1>
+        <form action="/cgi-bin/extraire_acrostiche.py" method="post" enctype="multipart/form-data">
+            <input type="file" name="fichier" accept=".txt" required>
+            <button type="submit">Décoder</button>
+        </form>
+        <p><a href="/index.html">Retour à l'accueil</a></p>
+    </div>
+</body>
+</html>
