@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Générer un acrostiche</title>
+    <link rel="stylesheet" href="css/theme_css.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>📝 Générer un acrostiche</h1>
+        <div class="banner">
+            Saisis un mot (12 lettres max) et obtiens un acrostiche généré par GPT-4.
+        </div>
+        <form action="/cgi-bin/creer_acrostiche.py" method="post">
+            <label for="mot">Mot à transformer en acrostiche :</label>
+            <input type="text" name="mot" id="mot" maxlength="12" required placeholder="Mot (12 lettres max)">
+            <br>
+            <input type="submit" value="✨ Générer l'acrostiche">
+        </form>
+        <a href="/index.html">~ Retour à l'accueil</a>
+    </div>
+</body>
+</html>
