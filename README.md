@@ -121,7 +121,7 @@ Lorsque tout cela fonctionne, nous allons passer à l'étape suivante, celle qui
 
 **3. Installation d'un éditeur de code**
 
-Nous allons commencer par installer un éditeur de code pour pouvoir y mettre nos pages **html** et nos scripts en **python**, ici nous avons ultilisé _**Visual Studio Code**_
+Nous allons commencer par installer un éditeur de code pour pouvoir y mettre nos pages **html** et nos scripts en **python**, ici nous avons utilisé _**Visual Studio Code**_
 
 - Pour commencer, nous allons installer les dépendances nécessaires :
 ```bash
