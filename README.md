@@ -313,7 +313,7 @@ Et rajoutez ce bloc :
 ```
 Il autorise l'exécution des scripts _**.py**_ dans ce dossier (et ses sous-dossiers).
 
-- Ce qui va vous donnez ceci : 
+- Ce qui va vous donner ceci : 
 ```bash
 <IfModule mod_alias.c>
     <IfModule mod_cgi.c>
