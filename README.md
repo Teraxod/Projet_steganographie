@@ -221,7 +221,7 @@ Au moment de l'ouverture de **VS Code**, vous verrez une petite fenêtre comme c
 
 
 Vous cliquez sur "Yes, I trust the authors"
-Et vous aurez accès à tous les fichiers **html** et même le dossier **css**.
+Et vous aurez accès à tous les fichiers **html** ainsi qu'au dossier **css**.
 
 - Maintenant nous allons faire en sorte que nos pages s'affichent sur notre page web
 
@@ -296,7 +296,7 @@ Vous allez avoir ça :
     </IfDefine>
 </IfModule>
 ```
-Et là vous allez ajouter ce : 
+Et là vous allez ajouter ceci : 
 ```bash
 ScriptAlias /scripts/ /usr/lib/cgi-bin/scripts/
 ```
