@@ -249,7 +249,7 @@ Redémarre Apache :
 sudo systemctl restart apache2
 ```
 
-Maintenant, rendez sur votre page web et rafraichissez là et vous devriez voir apparaître ça : 
+Maintenant, rendez-vous sur votre page web et rafraichissez là et vous devriez voir apparaître ça : 
 
 
 ![image](https://github.com/user-attachments/assets/ffbe8874-8389-428a-9763-482527b53ae6)
